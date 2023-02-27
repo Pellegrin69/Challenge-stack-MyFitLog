@@ -25,7 +25,11 @@ const router = createBrowserRouter([
   },
 ]);
 
-const theme = createTheme({});
+const theme = createTheme({
+  palette: {
+    primary: { main: '#d67c6a' },
+  },
+});
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
