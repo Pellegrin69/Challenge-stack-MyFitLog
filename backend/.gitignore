@@ -65,5 +65,4 @@
 .phpunit.result.cache
 ###< phpunit/phpunit ###
 
-/bin/
 ../.idea/
