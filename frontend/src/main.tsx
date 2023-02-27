@@ -1,3 +1,5 @@
+import { ThemeProvider } from '@emotion/react';
+import { createTheme } from '@mui/material';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -9,15 +11,25 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
+    children: [
+      {
+        path: 'about',
+        element: <About />,
+      },
+    ],
   },
   {
-    path: '/about',
+    path: '/home',
     element: <About />,
+    children: [],
   },
 ]);
 
+const theme = createTheme({});
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider theme={theme}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>
 );
