@@ -25,6 +25,10 @@ class Datas
     #[ORM\Column]
     private ?float $value = null;
 
+    #[ORM\ManyToOne(inversedBy: 'datas')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?DataTypes $data_type = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -62,6 +66,18 @@ class Datas
     public function setValue(float $value): self
     {
         $this->value = $value;
+
+        return $this;
+    }
+
+    public function getDataType(): ?DataTypes
+    {
+        return $this->data_type;
+    }
+
+    public function setDataType(?DataTypes $data_type): self
+    {
+        $this->data_type = $data_type;
 
         return $this;
     }
