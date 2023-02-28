@@ -1,9 +1,10 @@
+import './index.css';
+import 'normalize.css';
 import { ThemeProvider } from '@emotion/react';
 import { createTheme } from '@mui/material';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import './index.css';
 import About from './routes/About';
 import Root from './routes/Root';
 
@@ -28,6 +29,9 @@ const router = createBrowserRouter([
 const theme = createTheme({
   palette: {
     primary: { main: '#d67c6a' },
+  },
+  typography: {
+    fontFamily: 'Nunito',
   },
 });
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

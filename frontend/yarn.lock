@@ -6810,6 +6810,7 @@ __metadata:
     eslint-plugin-react: latest
     localforage: ^1.10.0
     match-sorter: ^6.3.1
+    normalize.css: ^8.0.1
     prettier: ^2.8.4
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -10196,6 +10197,13 @@ __metadata:
   version: 4.5.1
   resolution: "normalize-url@npm:4.5.1"
   checksum: 9a9dee01df02ad23e171171893e56e22d752f7cff86fb96aafeae074819b572ea655b60f8302e2d85dbb834dc885c972cc1c573892fea24df46b2765065dd05a
+  languageName: node
+  linkType: hard
+
+"normalize.css@npm:^8.0.1":
+  version: 8.0.1
+  resolution: "normalize.css@npm:8.0.1"
+  checksum: 4698cae88ec35e3f3e82f9f9402e6ffb906c27ccd6373cad88e6b3f5634fc7a043cb38702472299e5edb73825cf8b18d5fd9283f58829eddda79ea97453049a2
   languageName: node
   linkType: hard
 

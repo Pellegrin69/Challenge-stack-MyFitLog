@@ -1,8 +1,10 @@
-import styled from '@emotion/styled';
+import { Container } from "@mui/material";
+import { styled } from "@mui/system";
 
-export const Container = styled('div')`
+export const Root = styled(Container)`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
-  padding: 10px 20px;
+  padding: ${({theme}) => `${theme.spacing(2)} ${theme.spacing(4)}`};
 `;
