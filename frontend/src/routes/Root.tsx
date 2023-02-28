@@ -1,11 +1,13 @@
-import AppBar from '@/components/surface/Appbar';
+import Footer from '@/components/surface/footer';
+import Header from '@/components/surface/header';
 import { Outlet } from 'react-router-dom';
 
 function Root() {
   return (
     <div className="App">
-      <AppBar />
+      <Header />
       <Outlet />
+      <Footer />
     </div>
   );
 }
