@@ -27,43 +27,37 @@ function Header() {
           <Brand />
         </Styles.BrandContainer>
 
-        <Link to={`/login`}>
-          <Button variant="outlined">Essayer gratuitement</Button>
-        </Link>
+        <Button component={Link} to={'/login'} variant="outlined">
+          Essayer gratuitement
+        </Button>
       </Styles.Root>
 
       <Drawer anchor="bottom" open={drawerIsOpen} onClose={toggleDrawer}>
         <List>
-          <Link to={`/`}>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <HomeRounded />
-                </ListItemIcon>
-                <ListItemText primary="Accueil" />
-              </ListItemButton>
-            </ListItem>
-          </Link>
-          <Link to={`/about`}>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <Info />
-                </ListItemIcon>
-                <ListItemText primary="À Propos" />
-              </ListItemButton>
-            </ListItem>
-          </Link>
-          <Link to={`/login`}>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  <LockOpen />
-                </ListItemIcon>
-                <ListItemText primary="Login" />
-              </ListItemButton>
-            </ListItem>
-          </Link>
+          <ListItem disablePadding>
+            <ListItemButton component={Link} to={`/`}>
+              <ListItemIcon>
+                <HomeRounded />
+              </ListItemIcon>
+              <ListItemText primary="Accueil" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component={Link} to={`/about`}>
+              <ListItemIcon>
+                <Info />
+              </ListItemIcon>
+              <ListItemText primary="À Propos" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component={Link} to={`/login`}>
+              <ListItemIcon>
+                <LockOpen />
+              </ListItemIcon>
+              <ListItemText primary="Login" />
+            </ListItemButton>
+          </ListItem>
         </List>
       </Drawer>
     </>

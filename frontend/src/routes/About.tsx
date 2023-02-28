@@ -51,9 +51,9 @@ function About() {
           exceptionnelle à nos utilisateurs.
         </Typography>
         <Box sx={{ m: 8 }} />
-        <Link to={'/login'}>
-          <Button variant="outlined">Laisse toi guidé par MyFitLog</Button>
-        </Link>
+        <Button component={Link} to={'/login'} variant="outlined">
+          Laisse toi guidé par MyFitLog
+        </Button>
         <Box sx={{ m: 8 }} />
       </Container>
     </>
