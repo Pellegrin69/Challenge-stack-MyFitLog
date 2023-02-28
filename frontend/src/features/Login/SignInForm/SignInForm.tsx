@@ -1,9 +1,9 @@
 import React from 'react';
-import { InputText } from '@/components/Input/InputText/InputText';
 import { PrimaryButton } from '@/components/Input/Button/PrimaryButton/PrimaryButton';
 import { SecondaryButton } from '@/components/Input/Button/SecondaryButton/SecondaryButton';
 import * as Styles from '../LoginForm/LoginForm.styles';
-import { TextField } from '@mui/material';
+import { Button, TextField } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export const SignInForm: React.FC = () => {
   return (
@@ -16,8 +16,14 @@ export const SignInForm: React.FC = () => {
         placeholder="email@gmail.mail"
         type="password"
       />
-      <PrimaryButton buttonLabel="Sign in" />
-
+      <Button
+        component={Link}
+        to="/dashboard"
+        variant="contained"
+        color="primary"
+      >
+        Sign in
+      </Button>
       {/** <FormControlLabel control={<Checkbox defaultChecked/>} label="remember me"/> */}
       <SecondaryButton buttonLabel="Sign in with Google" />
     </Styles.Container>
