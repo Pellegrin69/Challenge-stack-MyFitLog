@@ -13,7 +13,7 @@ export const Jumbotron = () => {
       <Typography variant="body1" fontWeight="600">
         Deviens la meilleur version de toi même 😎
       </Typography>
-      <Box sx={{ m: { xs: 4, md: 10 } }} />
+      <Box sx={{ m: { xs: 4, md: 6 } }} />
       <Typography variant="body2">
         Vous êtes la personne la plus importante de votre vie, <br />
         Notre application est conçue pour vous aider ! <br />
@@ -21,7 +21,7 @@ export const Jumbotron = () => {
         pour commencer votre parcours vers une vie plus épanouissante et plus
         saine !
       </Typography>
-      <Box sx={{ m: { xs: 4, md: 10 } }} />
+      <Box sx={{ m: { xs: 4, md: 6 } }} />
       <Button variant="outlined">Essayer gratuitement</Button>
 
       <Background />
