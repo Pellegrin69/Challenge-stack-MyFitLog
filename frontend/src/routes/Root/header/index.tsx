@@ -1,6 +1,6 @@
 import { Brand } from '@/components/data_display/brand';
 import { Logo } from '@/components/data_display/logo';
-import { Info, LockOpen } from '@mui/icons-material';
+import { HomeRounded, Info, LockOpen } from '@mui/icons-material';
 import {
   Button,
   Drawer,
@@ -34,6 +34,16 @@ function Header() {
 
       <Drawer anchor="bottom" open={drawerIsOpen} onClose={toggleDrawer}>
         <List>
+          <Link to={`/`}>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <HomeRounded />
+                </ListItemIcon>
+                <ListItemText primary="Accueil" />
+              </ListItemButton>
+            </ListItem>
+          </Link>
           <Link to={`/about`}>
             <ListItem disablePadding>
               <ListItemButton>
