@@ -1,3 +1,4 @@
+import { styled } from '@mui/system';
 import * as Styles from './index.styles';
 
 export const Brand = () => {

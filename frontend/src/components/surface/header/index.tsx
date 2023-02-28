@@ -9,8 +9,10 @@ function Header() {
       <Button onClick={() => {}}>
         <Logo />
       </Button>
-      
-      <Brand />
+
+      <Styles.BrandContainer>
+        <Brand />
+      </Styles.BrandContainer>
 
       <Button variant="outlined">Essayer gratuitement</Button>
     </Styles.Root>

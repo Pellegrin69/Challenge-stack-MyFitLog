@@ -28,14 +28,14 @@ const router = createBrowserRouter([
 
 const theme = createTheme({
   palette: {
-    primary: { 
+    primary: {
       light: '#FDF4EB',
-      main: '#d67c6a', 
+      main: '#d67c6a',
     },
     text: {
       primary: '#000000',
-      secondary: '#d67c6a'
-    }
+      secondary: '#d67c6a',
+    },
   },
   typography: {
     fontFamily: 'Nunito',
