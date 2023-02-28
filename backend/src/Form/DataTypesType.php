@@ -2,7 +2,10 @@
 
 namespace App\Form;
 
+use App\Entity\Categories;
 use App\Entity\DataTypes;
+use App\Entity\Units;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -13,8 +16,15 @@ class DataTypesType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('category')
-            ->add('unit')
+            ->add('category',EntityType::class,[
+                "class" => Categories::class,
+                "choice_label" => "name"
+            ])
+            ->add('unit',EntityType::class,[
+                "class" => Units::class,
+                "choice_label" => "name",
+                "multiple" => false
+            ])
         ;
     }
 
@@ -25,3 +35,5 @@ class DataTypesType extends AbstractType
         ]);
     }
 }
+
+
