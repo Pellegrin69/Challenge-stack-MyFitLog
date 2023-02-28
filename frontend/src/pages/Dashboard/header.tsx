@@ -3,8 +3,10 @@ import { LogoutOutlined, MonitorHeart, Settings } from '@mui/icons-material';
 import {
   Box,
   Button,
+  Divider,
   List,
   ListItem,
+  ListItemAvatar,
   ListItemButton,
   ListItemIcon,
 } from '@mui/material';
@@ -25,12 +27,18 @@ function Header() {
       <Button variant="text" component={Link} to="/dashboard">
         <LogoDashboard />
       </Button>
-      <Box sx={{ m: 2 }} />
+      <Box sx={{ m: 1 }} />
+      <Divider />
+      <Box sx={{ m: 1 }} />
       <List>
         <ListItem>
           <ListItemButton sx={{ borderRadius: 2, justifyContent: 'center' }}>
             <ListItemIcon sx={{ minWidth: 0 }}>
-              <MonitorHeart color={location.pathname === '/dashboard' ? 'primary' : 'inherit'} />
+              <MonitorHeart
+                color={
+                  location.pathname === '/dashboard' ? 'primary' : 'inherit'
+                }
+              />
             </ListItemIcon>
           </ListItemButton>
         </ListItem>

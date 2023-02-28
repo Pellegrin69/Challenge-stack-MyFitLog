@@ -1,5 +1,5 @@
 function Analytics() {
-  return <>gdsauzhbdsajndao</>;
+  return <></>;
 }
 
 export default Analytics;

@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import About from './pages/Root/About';
 import Root from './pages/Root';
-import Login from './pages/Root/LoginPage/Login';
+import Login from './pages/Root/Login/Login';
 import Home from './pages/Root/Home';
 import Dashboard from './pages/Dashboard';
 import Analytics from './pages/Dashboard/Analytics';
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/login',
+        path: 'login',
         element: <Login />,
       },
       {
@@ -46,11 +46,11 @@ const theme = createTheme({
   palette: {
     primary: {
       light: '#FDF4EB',
-      main: '#d67c6a',
+      main: '#D99E63',
     },
     text: {
       primary: '#000000',
-      secondary: '#d67c6a',
+      secondary: '#D99E63',
     },
   },
   typography: {
