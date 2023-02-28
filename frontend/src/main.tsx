@@ -4,11 +4,12 @@ import { createTheme, ThemeProvider } from '@mui/material';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import About from './pages/About';
+import About from './pages/Root/About';
 import Root from './pages/Root';
-import Login from './pages/LoginPage/Login';
-import Home from './pages/Home';
+import Login from './pages/Root/LoginPage/Login';
+import Home from './pages/Root/Home';
 import Dashboard from './pages/Dashboard';
+import Analytics from './pages/Dashboard/Analytics';
 
 const router = createBrowserRouter([
   {
@@ -32,7 +33,12 @@ const router = createBrowserRouter([
   {
     path: '/dashboard',
     element: <Dashboard />,
-    children: [],
+    children: [
+      {
+        path: '',
+        element: <Analytics />,
+      },
+    ],
   },
 ]);
 
