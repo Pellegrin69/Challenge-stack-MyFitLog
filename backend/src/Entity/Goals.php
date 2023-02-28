@@ -33,6 +33,10 @@ class Goals
     #[ORM\JoinColumn(nullable: false)]
     private ?Users $_user = null;
 
+    #[ORM\ManyToOne(inversedBy: 'goals')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?DataTypes $data_type = null;
+
 
     public function getId(): ?int
     {
@@ -109,6 +113,18 @@ class Goals
     public function setDescription(?string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getDataType(): ?DataTypes
+    {
+        return $this->data_type;
+    }
+
+    public function setDataType(?DataTypes $data_type): self
+    {
+        $this->data_type = $data_type;
 
         return $this;
     }
