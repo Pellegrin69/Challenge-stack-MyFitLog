@@ -4,13 +4,11 @@ import { Box } from "@mui/material"
 
 export const SecondaryButton: React.FC<SecondaryButtonProps> = (props) => {
   return (
-    <Box>
       <Styled.ButtonComponent
         variant="outlined"
       >
         {props.buttonLabel}
       </Styled.ButtonComponent>
-    </Box>
   )
 }
 

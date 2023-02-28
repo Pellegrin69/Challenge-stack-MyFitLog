@@ -1,37 +1,25 @@
-import React from "react"
-import { InputText } from "@/components/Input/InputText/InputText"
-import { PrimaryButton } from "@/components/Input/Button/PrimaryButton/PrimaryButton"
-import { SecondaryButton } from "@/components/Input/Button/SecondaryButton/SecondaryButton"
-import * as Styles from "../LoginForm/LoginForm.styles"
+import React from 'react';
+import { InputText } from '@/components/Input/InputText/InputText';
+import { PrimaryButton } from '@/components/Input/Button/PrimaryButton/PrimaryButton';
+import { SecondaryButton } from '@/components/Input/Button/SecondaryButton/SecondaryButton';
+import * as Styles from '../LoginForm/LoginForm.styles';
+import { TextField } from '@mui/material';
 
 export const SignInForm: React.FC = () => {
   return (
     <Styles.Container>
-      <InputText
-        labelInput="Firstname"
-        placeholder="emmanuel"
-      />
-      <InputText
-        labelInput="Lastname"
-        placeholder="Dupont"
-      />
-      <InputText
-        labelInput="Email"
+      <TextField label="Firstname" placeholder="emmanuel" />
+      <TextField label="Lastname" placeholder="Dupont" />
+      <TextField label="Email" placeholder="email@gmail.mail" />
+      <TextField
+        label="Password"
         placeholder="email@gmail.mail"
+        type="password"
       />
-      <InputText
-        labelInput="Password"
-        placeholder="email@gmail.mail"
-        inputType="password"
-      />
-      <PrimaryButton
-        buttonLabel="Sign in"
-      />
+      <PrimaryButton buttonLabel="Sign in" />
 
       {/** <FormControlLabel control={<Checkbox defaultChecked/>} label="remember me"/> */}
-      <SecondaryButton
-        buttonLabel="Sign in with Google"
-      />
+      <SecondaryButton buttonLabel="Sign in with Google" />
     </Styles.Container>
-  )
-}
+  );
+};
