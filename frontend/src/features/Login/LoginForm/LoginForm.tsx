@@ -1,20 +1,20 @@
 import React from "react"
-import { InputText } from "@/components/Input/InputText/InputText"
 import { PrimaryButton } from "@/components/Input/Button/PrimaryButton/PrimaryButton"
 import { SecondaryButton } from "@/components/Input/Button/SecondaryButton/SecondaryButton"
 import * as Styles from "./LoginForm.styles"
+import { TextField } from "@mui/material"
 
 export const LoginForm: React.FC = () => {
   return (
     <Styles.Container>
-      <InputText
-        labelInput="email"
+      <TextField
+        label="email"
         placeholder="emm@gmail.com"
       />
-      <InputText
-        labelInput="password"
+      <TextField
+        label="password"
         placeholder="emm@gmail.com"
-        inputType="password"
+        type="password"
       />
       <PrimaryButton
         buttonLabel="login"

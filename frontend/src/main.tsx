@@ -1,14 +1,15 @@
 import './index.css';
 import 'normalize.css';
-import { ThemeProvider } from '@emotion/react';
-import { createTheme } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import About from './pages/About';
+import About from './pages/Root/About';
 import Root from './pages/Root';
-import { Login } from "@/pages/LoginPage/Login"
-import Home from './pages/Home';
+import Login from './pages/Root/Login/Login';
+import Home from './pages/Root/Home';
+import Dashboard from './pages/Dashboard';
+import Analytics from './pages/Dashboard/Analytics';
 
 const router = createBrowserRouter([
   {
@@ -19,10 +20,10 @@ const router = createBrowserRouter([
         path: '',
         element: <Home />,
       },
-  {
-    path: '/login',
-    element: <Login />,
-  },
+      {
+        path: 'login',
+        element: <Login />,
+      },
       {
         path: 'about',
         element: <About />,
@@ -31,20 +32,25 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard',
-    element: <About />,
-    children: [],
+    element: <Dashboard />,
+    children: [
+      {
+        path: '',
+        element: <Analytics />,
+      },
+    ],
   },
-])
+]);
 
 const theme = createTheme({
   palette: {
     primary: {
       light: '#FDF4EB',
-      main: '#d67c6a',
+      main: '#D99E63',
     },
     text: {
       primary: '#000000',
-      secondary: '#d67c6a',
+      secondary: '#D99E63',
     },
   },
   typography: {
@@ -57,4 +63,4 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       <RouterProvider router={router} />
     </ThemeProvider>
   </React.StrictMode>
-)
+);
