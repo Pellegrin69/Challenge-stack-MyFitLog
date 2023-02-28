@@ -1,19 +1,19 @@
 import { LogoDashboard } from '@/components/data_display/logo/dashboard';
-import { LogoutOutlined, MonitorHeart, Settings } from '@mui/icons-material';
+import { LogoutOutlined, MonitorHeart, Settings, AccountCircle } from '@mui/icons-material';
 import {
   Box,
   Button,
   Divider,
   List,
   ListItem,
-  ListItemAvatar,
   ListItemButton,
   ListItemIcon,
 } from '@mui/material';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 function Header() {
-  const location = useLocation();
+  const location = useLocation()
+  const navigate = useNavigate()
 
   return (
     <Box
@@ -35,6 +35,7 @@ function Header() {
           <ListItemButton sx={{ borderRadius: 2, justifyContent: 'center' }}>
             <ListItemIcon sx={{ minWidth: 0 }}>
               <MonitorHeart
+                onClick={() => navigate("/dashboard")}
                 color={
                   location.pathname === '/dashboard' ? 'primary' : 'inherit'
                 }
@@ -46,6 +47,18 @@ function Header() {
           <ListItemButton sx={{ borderRadius: 2, justifyContent: 'center' }}>
             <ListItemIcon sx={{ minWidth: 0 }}>
               <Settings />
+            </ListItemIcon>
+          </ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton sx={{ borderRadius: 2, justifyContent: 'center' }}>
+            <ListItemIcon sx={{ minWidth: 0 }}>
+              <AccountCircle
+                onClick={() => navigate("my-profile")}
+                color={
+                  location.pathname === '/dashboard/my-profile' ? 'primary' : 'inherit'
+                }
+              />
             </ListItemIcon>
           </ListItemButton>
         </ListItem>
