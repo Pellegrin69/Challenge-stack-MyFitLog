@@ -1,13 +1,13 @@
-import { Box } from '@mui/material';
+import { Box, Stack } from '@mui/material';
 import { Outlet } from 'react-router-dom';
 import Header from './header';
 
 function Dashboard() {
   return (
-    <Box bgcolor="primary.light">
+    <Stack direction="row" bgcolor="primary.light">
       <Header />
       <Outlet />
-    </Box>
+    </Stack>
   );
 }
 
