@@ -5,10 +5,11 @@ import { createTheme } from '@mui/material';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import About from './routes/About';
-import Root from './routes/Root';
-import Home from './routes/Home';
-import Dashboard from './routes/Dashboard';
+import About from './pages/About';
+import Root from './pages/Root';
+import Login from './pages/LoginPage/Login';
+import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: '',
         element: <Home />,
+      },
+      {
+        path: '/login',
+        element: <Login />,
       },
       {
         path: 'about',
