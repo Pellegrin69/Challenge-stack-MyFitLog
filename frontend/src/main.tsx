@@ -5,9 +5,10 @@ import { createTheme } from '@mui/material';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import About from './routes/About';
-import Root from './routes/Root';
-import Home from './routes/Home';
+import About from './pages/About';
+import Root from './pages/Root';
+import { Login } from "@/pages/LoginPage/Login"
+import Home from './pages/Home';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
         path: '',
         element: <Home />,
       },
+  {
+    path: '/login',
+    element: <Login />,
+  },
       {
         path: 'about',
         element: <About />,
@@ -29,7 +34,7 @@ const router = createBrowserRouter([
     element: <About />,
     children: [],
   },
-]);
+])
 
 const theme = createTheme({
   palette: {
@@ -52,4 +57,4 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
       <RouterProvider router={router} />
     </ThemeProvider>
   </React.StrictMode>
-);
+)
