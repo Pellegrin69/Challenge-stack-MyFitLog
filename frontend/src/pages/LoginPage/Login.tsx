@@ -4,7 +4,7 @@ import * as Styled from "./LoginPage.styles"
 import { Typography } from "@mui/material"
 import { LoginForm } from "@/features/Login/LoginForm/LoginForm"
 import { SignInForm } from "@/features/Login/SignInForm/SignInForm"
-export const Login: React.FC = () => {
+function Login() {
   const unDrawnLogin = "src/assets/undraw_login_page.svg"
   const logo = "src/assets/logo.svg"
 
@@ -56,3 +56,5 @@ export const Login: React.FC = () => {
     </Styled.Container>
   )
 }
+
+export default Login;
