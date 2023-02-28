@@ -26,12 +26,12 @@ class UsersType extends AbstractType
             ->add('role',EntityType::class,[
                 "class" => Roles::class,
                 "choice_label" => "name",
-                "multiple" => true
+                "multiple" => false
             ])
             ->add('gender',EntityType::class,[
                 "class" => Genders::class,
                 "choice_label" => "name",
-                "multiple" => true
+                "multiple" => false
             ])
         ;
     }
