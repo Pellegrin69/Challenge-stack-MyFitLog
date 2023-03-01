@@ -4,8 +4,8 @@ import * as Styles from './index.styles';
 
 export const Jumbotron = () => {
   return (
-    <Styles.Root sx={{ position: 'relative' }}>
-      <Typography variant="h3" variantMapping={{ h4: 'h1' }} fontWeight="700">
+    <Styles.Root sx={{ position: 'relative' }} padding={{ xs: 5, md: 10 }}>
+      <Typography variant="h1" fontSize={{ xs: 30, md: 60 }} fontWeight="700">
         Suivez votre santé <br />
         avec MyFitLog
       </Typography>
