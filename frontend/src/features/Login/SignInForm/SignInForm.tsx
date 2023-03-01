@@ -1,5 +1,4 @@
 import React from 'react';
-import { InputText } from '@/components/Input/InputText/InputText';
 import { PrimaryButton } from '@/components/Input/Button/PrimaryButton/PrimaryButton';
 import { SecondaryButton } from '@/components/Input/Button/SecondaryButton/SecondaryButton';
 import * as Styles from '../LoginForm/LoginForm.styles';
@@ -16,7 +15,7 @@ export const SignInForm: React.FC = () => {
         placeholder="email@gmail.mail"
         type="password"
       />
-      <PrimaryButton buttonLabel="Sign in" />
+      <PrimaryButton buttonLabel="Sign in" onClick={() => console.log("test")}/>
 
       {/** <FormControlLabel control={<Checkbox defaultChecked/>} label="remember me"/> */}
       <SecondaryButton buttonLabel="Sign in with Google" />

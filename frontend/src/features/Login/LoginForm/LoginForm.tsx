@@ -3,8 +3,10 @@ import { PrimaryButton } from "@/components/Input/Button/PrimaryButton/PrimaryBu
 import { SecondaryButton } from "@/components/Input/Button/SecondaryButton/SecondaryButton"
 import * as Styles from "./LoginForm.styles"
 import { TextField } from "@mui/material"
+import { useNavigate } from "react-router-dom"
 
 export const LoginForm: React.FC = () => {
+  const navigate = useNavigate()
   return (
     <Styles.Container>
       <TextField
@@ -18,6 +20,7 @@ export const LoginForm: React.FC = () => {
       />
       <PrimaryButton
         buttonLabel="login"
+        onClick={() => navigate("/dashboard")}
       />
 
       {/** <FormControlLabel control={<Checkbox defaultChecked/>} label="remember me"/> */}
