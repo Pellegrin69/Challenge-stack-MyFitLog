@@ -5,13 +5,15 @@ import { Outlet } from 'react-router-dom';
 
 function Root() {
   return (
-    <>
+    <Box position="relative" minHeight="100vh">
       <Header />
-      <Box sx={{ m: 10 }} />
-      <Outlet />
-      <Box sx={{ m: 10 }} />
+      <div>
+        <Box sx={{ p: 5 }} />
+        <Outlet />
+        <Box sx={{ p: 10 }} />
+      </div>
       <Footer />
-    </>
+    </Box>
   );
 }
 

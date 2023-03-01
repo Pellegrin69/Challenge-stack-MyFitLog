@@ -1,7 +1,7 @@
 import React from 'react';
 import * as Styled from './Login.styles';
 
-import { Typography } from '@mui/material';
+import { Box, Button, Stack, Typography } from '@mui/material';
 import { LoginForm } from '@/features/Login/LoginForm/LoginForm';
 import { SignInForm } from '@/features/Login/SignInForm/SignInForm';
 
@@ -12,16 +12,22 @@ function Login() {
   const [isSignInClick, setIsSignInClick] = React.useState(false);
   return (
     <Styled.Container>
-      <section>
+      <Box sx={{ display: { xs: 'none', md: 'block' } }} width="80%" margin="0 auto">
         <img src={unDrawnLogin} alt="" />
-      </section>
+      </Box>
 
       {/** section formulaire */}
 
-      <Styled.FormContainer>
-        <Styled.LogoContainer>
+      <Stack
+        direction="column"
+        justifyContent="center"
+        spacing={2}
+        maxWidth={500}
+        margin="0 auto"
+      >
+        <Box margin="0 auto" width={80}>
           <img src={logo} alt="logo coeur cardio" />
-        </Styled.LogoContainer>
+        </Box>
 
         <Typography variant="h3" gutterBottom>
           Hello Again !
@@ -44,22 +50,22 @@ function Login() {
               : 'Don’t have an account yet ?'}
           </Typography>
           {isSignInClick ? (
-            <Styled.SignUpText
-              variant="caption"
+            <Button
+              variant="text"
               onClick={() => setIsSignInClick(false)}
             >
               sign up !
-            </Styled.SignUpText>
+            </Button>
           ) : (
-            <Styled.SignUpText
-              variant="caption"
+            <Button
+              variant="text"
               onClick={() => setIsSignInClick(true)}
             >
               sign in !
-            </Styled.SignUpText>
+            </Button>
           )}
         </div>
-      </Styled.FormContainer>
+      </Stack>
     </Styled.Container>
   );
 }
