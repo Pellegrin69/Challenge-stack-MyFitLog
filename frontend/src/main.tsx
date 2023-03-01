@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import About from './pages/Root/About';
 import Root from './pages/Root';
-import Login from './pages/Root/Login/Login';
+import Login from './pages/Root/Login';
 import Home from './pages/Root/Home';
 import Dashboard from './pages/Dashboard';
 import Analytics from './pages/Dashboard/Analytics';
